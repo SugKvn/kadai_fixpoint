@@ -1,9 +1,11 @@
 #!/bin/sh
 
+## get parameters ##
 Ini=`date '+%Y/%m/%d' -d "$1"`
 Fin=`date '+%Y/%m/%d' -d "$2"`
 echo $Ini-$Fin >> AcsAnl.log
 
+## extract specified period ##
 tmp=$Ini
 while [ 1 ] ; do
   d=`date '+%d/%b/%Y' -d "$tmp"`

@@ -1,5 +1,6 @@
 #!/bin/sh
 
+## get Flag & Options from Option file ##
 Flag=`grep Flag      $2 | awk -F"=" '{print $2}'`
 Pini=`grep PeriodIni $2 | awk -F"=" '{print $2}'`
 Pfin=`grep PeriodFin $2 | awk -F"=" '{print $2}'`
@@ -7,10 +8,13 @@ Tini=`grep TimeIni   $2 | awk -F"=" '{print $2}'`
 Tfin=`grep TimeFin   $2 | awk -F"=" '{print $2}'`
 
 rm -rf *tmp AcsAnl.log
+
+## marge access logs in all.tmp ##
 cat $1 | while read line;do
   cat $line >> all.tmp
 done
 
+## run each shell script ##
 if   [ "$Flag" == "1" ];then
   ./none.sh
 elif [ "$Flag" == "2" ];then
