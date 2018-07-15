@@ -10,7 +10,12 @@ while [ -s all.tmp ];do
   mv tmp.tmp all.tmp
 done
 
-echo Total=$sum        >> AcsAnl.log
-sort -k2,2nr AcsAnl.tmp  >> AcsAnl.log
+if [ -a AcsAnl.tmp ];then
+  echo Total=$sum          >> AcsAnl.log
+  sort -k2,2nr AcsAnl.tmp  >> AcsAnl.log
+else
+  echo No Access >> AclAnl.log
+fi
+
 rm -rf *.tmp
 
