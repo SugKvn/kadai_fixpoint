@@ -14,7 +14,7 @@ if [ -a AcsAnl.tmp ];then
   echo Total=$sum          >> AcsAnl.log
   sort -k2,2nr AcsAnl.tmp  >> AcsAnl.log
 else
-  echo No Access >> AclAnl.log
+  echo No Access >> AcsAnl.log
 fi
 
 rm -rf *.tmp

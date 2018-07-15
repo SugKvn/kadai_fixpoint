@@ -2,7 +2,7 @@
 Flag=4
 #option) 1.none, 2.period, 3.time, 4.both
 
-*** priod *** (example) 2005/04/18
+*** period *** (example) 2005/04/18
 PeriodIni=2005/04/18
 PeriodFin=2005/04/18
 
