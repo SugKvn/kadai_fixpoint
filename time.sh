@@ -8,7 +8,7 @@ echo $Ini-$Fin >> AcsAnl.log
 ## extract specified time ##
 tmp=$Ini
 while [ 1 ] ; do
-  grep $tmp all.tmp >> part.tmp 
+  grep ":$tmp" all.tmp >> part.tmp 
     if [ "$tmp" == "$Fin" ] ; then
       break
     fi
