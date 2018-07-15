@@ -1,0 +1,11 @@
+*** Option ***
+Flag=4
+#option) 1.none, 2.period, 3.time, 4.both
+
+*** priod *** (example) 2005/04/18
+PeriodIni=2005/04/18
+PeriodFin=2005/04/18
+
+*** time ***  (example) 00:00:00
+TimeIni=00:00:00
+TimeFin=01:00:00
